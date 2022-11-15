@@ -9,6 +9,12 @@ def call (body) {
     pipeline {
         agent { label "nhaug" }
         stages {
+            stage ("helloWorld") {
+                steps {
+                    def lib = new helloWorld()
+                    lib.helloWorld(this)
+                }
+            }
             stage("cleanup") {
                 steps {
                     echo "Vor clean"
