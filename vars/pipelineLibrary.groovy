@@ -11,7 +11,8 @@ def call (body) {
         stages {
             stage ("helloWorld") {
                 steps {
-                    script {                        
+                    script {
+                        echo ${config.name}
                         def lib = new HelloWorld()
                         lib.helloWorld(this)
                     }
@@ -40,6 +41,14 @@ def call (body) {
             stage("build") {
                 steps {
                     echo "build"
+                    sh '''
+                      cp *.py 
+                    '''
+                }
+            }
+            stage("archive") {
+                steps {
+                    # jetzt das archive Ordner hochladen
                 }
             }
         }
