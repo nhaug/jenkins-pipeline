@@ -11,8 +11,9 @@ def call (body) {
         stages {
             stage ("helloWorld") {
                 steps {
+                      echo "hello ${config.name}"
                     script {
-                        echo ${config.name}
+                        echo config.name
                         def lib = new HelloWorld()
                         lib.helloWorld(this)
                     }
