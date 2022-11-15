@@ -15,7 +15,7 @@ def call (body) {
                     script {
                         echo config.name
                         def lib = new HelloWorld()
-                        lib.helloWorld(this)
+                        lib.helloWorld(this, config.name)
                     }
                 }
             }
