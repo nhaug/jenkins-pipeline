@@ -12,7 +12,7 @@ def call (body) {
             stage ("helloWorld") {
                 steps {
                     script {                        
-                        def lib = new helloWorld()
+                        def lib = new HelloWorld()
                         lib.helloWorld(this)
                     }
                 }
