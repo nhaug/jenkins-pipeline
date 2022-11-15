@@ -1,5 +1,9 @@
-package com.jenkins.HelloWorld
+package com.jenkins;
 
-import hudson.*
+import hudson.*;
   
-println "Hello World!"
+public class HelloWorld {
+  static void helloWorld(def steps) {
+    steps.echo "Hello World!"
+  }
+}
