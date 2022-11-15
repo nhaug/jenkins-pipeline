@@ -11,8 +11,10 @@ def call (body) {
         stages {
             stage ("helloWorld") {
                 steps {
-                    def lib = new helloWorld()
-                    lib.helloWorld(this)
+                    script {                        
+                        def lib = new helloWorld()
+                        lib.helloWorld(this)
+                    }
                 }
             }
             stage("cleanup") {
