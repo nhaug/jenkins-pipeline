@@ -48,7 +48,7 @@ def call (body) {
             }
             stage("archive") {
                 steps {
-                    # jetzt das archive Ordner hochladen
+                    echo "jetzt das Archive hochladen"
                 }
             }
         }
